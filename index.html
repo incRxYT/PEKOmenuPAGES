@@ -5,183 +5,215 @@
   <title>PEKOmenu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
-      background: #050805;
+      background: #0d1117;
       font-family: 'Source Code Pro', monospace;
-      color: #cfeedd;
+      color: #d7ffe9;
     }
 
-    .wrapper {
-      width: 800px;
-      margin: 40px auto;
-      background: #08120d;
-
-      /* darker border (no white look) */
-      border: 1px solid #0e241a;
-
-      border-radius: 8px;
-
-      /* remove harsh glow */
-      box-shadow: 0 0 15px rgba(0,0,0,0.7);
+    .container {
+      max-width: 1400px;
+      margin: auto;
+      padding: 20px;
     }
 
-    .topbar {
-      padding: 10px 15px;
-      background: #0b1812;
-
-      /* darker divider */
-      border-bottom: 1px solid #0e241a;
-
-      border-radius: 8px 8px 0 0;
-      font-size: 14px;
-      color: #7ec9a3;
+    /* NAV */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
     }
 
-    .title {
+    .logo {
+      background: #1f3f33;
+      padding: 6px 14px;
+      border-radius: 999px;
       font-weight: 600;
-      color: #eafff5;
     }
 
-    .content {
-      padding: 10px;
+    .nav-buttons {
+      display: flex;
+      gap: 10px;
     }
 
-    .section {
-      background: #0a1712;
-
-      /* super subtle borders */
-      border: 1px solid #0e241a;
-
-      margin-bottom: 10px;
-      border-radius: 6px;
-    }
-
-    .section-header {
-      padding: 6px 10px;
-      background: #0d1f17;
-
-      border-bottom: 1px solid #0e241a;
-
-      border-radius: 6px 6px 0 0;
+    .btn {
+      background: #2d5a47;
+      padding: 6px 14px;
+      border-radius: 999px;
       font-size: 13px;
-      color: #6fd0a2;
+      cursor: pointer;
     }
 
-    .section-content {
-      padding: 8px 10px;
+    .btn:hover {
+      background: #3c7a61;
+    }
+
+    /* HERO */
+    .hero {
+      background: #4f6f5d;
+      border-radius: 20px;
+      padding: 80px 50px;
+      margin-bottom: 30px;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: 42px;
+    }
+
+    .hero p {
+      margin-top: 10px;
+      color: #cdeedd;
+    }
+
+    /* SECTION TITLE */
+    .section-title {
+      background: #b8e6cf;
+      color: #1b2b24;
+      padding: 10px 18px;
+      border-radius: 999px;
+      display: inline-block;
+      font-weight: 600;
+      margin: 30px 0 15px;
+    }
+
+    /* GRID */
+    .grid {
+      display: flex;
+      gap: 60px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .text {
+      flex: 1;
+      min-width: 350px;
+    }
+
+    .image {
+      flex: 1;
+      min-width: 350px;
+      height: 220px;
+      background: #1a2e25;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #7fbfa3;
       font-size: 13px;
     }
 
-    .item {
-      padding: 2px 0;
-      color: #bfe8d3;
+    ul {
+      padding-left: 20px;
     }
 
-    .item::before {
-      content: "[ ] ";
-      color: #3f8f6c;
+    li {
+      margin-bottom: 6px;
     }
 
-    .usage {
-      background: #07130e;
+    /* INSTALL */
+    .install {
+      display: flex;
+      gap: 60px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
 
-      border: 1px solid #0e241a;
+    .steps {
+      flex: 1;
+      min-width: 350px;
+    }
 
-      padding: 10px;
-      font-size: 13px;
-      color: #7ec9a3;
-      border-radius: 6px;
+    .steps li {
+      margin-bottom: 8px;
     }
 
     .key {
-      background: #0e241a;
-
-      /* remove bright edge */
-      border: 1px solid #123526;
-
-      padding: 1px 5px;
-      color: #ffffff;
-      border-radius: 3px;
-    }
-
-    /* remove hover glow entirely */
-    .wrapper:hover {
-      box-shadow: 0 0 15px rgba(0,0,0,0.7);
+      background: #1f3f33;
+      padding: 2px 6px;
+      border-radius: 4px;
     }
   </style>
 </head>
 <body>
 
-  <div class="wrapper">
-    <div class="topbar">
-      <span class="title">PEKOmenu</span> — GDH-style menu (v1)
+  <div class="container">
+
+    <!-- NAV -->
+    <div class="nav">
+      <div class="logo">PEKO</div>
+
+      <div class="nav-buttons">
+        <div class="btn">Feature Overview</div>
+        <div class="btn">Install Guide</div>
+        <div class="btn">Source Code</div>
+        <div class="btn">Geode Page</div>
+      </div>
     </div>
 
-    <div class="content">
+    <!-- HERO -->
+    <div class="hero">
+      <h1>PEKOmenu is a simple mod menu.</h1>
+      <p>GDH-style hack menu for Geometry Dash 2.2081 with essential features.</p>
+    </div>
 
-      <div class="section">
-        <div class="section-header">Basic Hacks</div>
-        <div class="section-content">
-          <div class="item">Auto Retry</div>
-          <div class="item">Instant Complete</div>
-          <div class="item">No Death Effect</div>
-          <div class="item">Safe Mode</div>
-          <div class="item">Practice Mode</div>
-          <div class="item">Death Counter</div>
-        </div>
+    <!-- FEATURES -->
+    <div class="section-title">Feature Overview</div>
+
+    <div class="grid">
+      <div class="text">
+        <ul>
+          <li>Auto Retry</li>
+          <li>Instant Complete</li>
+          <li>No Death Effect</li>
+          <li>Safe Mode</li>
+          <li>Practice Mode</li>
+          <li>Death Counter</li>
+          <li>Speed Hack</li>
+          <li>TPS Unlocker</li>
+          <li>Frame Stepper</li>
+          <li>Startpos Switcher</li>
+          <li>Labels (FPS, Attempts, Progress)</li>
+          <li>Hitboxes / Visual Tweaks</li>
+        </ul>
       </div>
 
-      <div class="section">
-        <div class="section-header">Speed</div>
-        <div class="section-content">
-          <div class="item">Speed Hack</div>
-          <div class="item">TPS Unlocker</div>
-        </div>
+      <div class="image">
+        (menu preview here)
+      </div>
+    </div>
+
+    <!-- INSTALL -->
+    <div class="section-title">Install Guide</div>
+
+    <div class="install">
+
+      <div class="image">
+        (geode screenshot here)
       </div>
 
-      <div class="section">
-        <div class="section-header">Gameplay</div>
-        <div class="section-content">
-          <div class="item">Frame Stepper</div>
-          <div class="item">Startpos Switcher</div>
-        </div>
-      </div>
+      <div class="steps">
+        <ol>
+          <li>Download the latest version from GitHub Releases</li>
+          <li>Open Geode → Settings → Install from File</li>
+          <li>Select the downloaded file</li>
+          <li>Restart Geometry Dash</li>
+          <li>Press <span class="key">Tab</span> to open the menu</li>
+        </ol>
 
-      <div class="section">
-        <div class="section-header">Labels</div>
-        <div class="section-content">
-          <div class="item">Cheat Indicator</div>
-          <div class="item">FPS</div>
-          <div class="item">Attempts</div>
-          <div class="item">Progress</div>
-        </div>
-      </div>
-
-      <div class="section">
-        <div class="section-header">Visuals</div>
-        <div class="section-content">
-          <div class="item">Hitboxes</div>
-          <div class="item">Hide Glow</div>
-          <div class="item">Hide Particles</div>
-        </div>
-      </div>
-
-      <div class="section">
-        <div class="section-header">Config</div>
-        <div class="section-content">
-          <div class="item">Save / Load (JSON)</div>
-        </div>
-      </div>
-
-      <div class="usage">
-        Press <span class="key">Tab</span> to open/close menu
+        <p>
+          (Temporary method — working on getting it onto the Geode mod index.)
+        </p>
       </div>
 
     </div>
+
   </div>
 
 </body>
